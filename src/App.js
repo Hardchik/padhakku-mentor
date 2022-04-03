@@ -2,6 +2,9 @@
 import './landingPage.css'
 import React from 'react'
 import TagManager from 'react-gtm-module'
+import Logo from './logo/Padhakku White.png'
+import Footer from './components/Footer'
+
 const tagManagerArgs = {
   gtmId: 'GTM-KT2GFP9'
 }
@@ -10,10 +13,13 @@ TagManager.initialize(tagManagerArgs)
 function App() {
   return (
     <div className='container'>
-      <div className='logo'><img src='https://padhakku.s3.ap-south-1.amazonaws.com/website_icon_logos/Padhakku+Blue.png' alt='...' /></div>
-      <div className='poster'><img src='https://padhakku.s3.ap-south-1.amazonaws.com/website+banners/Resume.gif' alt='...' /></div>
-      <div className='content'><p>Lorem Ipsum is dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p></div>
-      <a className='mentor_button' href='https://www.google.com/'>CLICK HERE</a>
+      <div className='logo'><img src={Logo} alt='...' /></div>
+      <div className='poster'><img src='https://padhakku.s3.ap-south-1.amazonaws.com/Marketing+landing+Pages/Mentor+Page.jpg' alt='...' /></div>
+      <div className='content'><p>Register for a free 15 minutes  Mentoring Session via experts from ZS Associates, O9 Solutions, Razorpay, United Airlines, Microsoft etc.</p></div>
+      <div className='flex'>  
+        <a className='mentor_button' href='https://bit.ly/mentoring_mpl'>GET MENTORSHIP NOW</a>
+        </div>
+      <Footer className='Footer' />
     </div>
   );
 }
